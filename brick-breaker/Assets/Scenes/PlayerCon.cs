@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class PlayerCon : MonoBehaviour
 {
+    Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(0, 0);
     }    void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            this.transform.Translate(0.005f,0,0);
+            rb.velocity = new Vector2(5, 0);
         }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            this.transform.Translate(-0.005f, 0, 0);
+            rb.velocity = new Vector2(-5, 0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);      
         }
 
     }
