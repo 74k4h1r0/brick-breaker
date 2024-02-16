@@ -28,6 +28,10 @@ public class CircleCon : MonoBehaviour
         {
             Destroy(collider2D.gameObject);
         }
+        else if (collider2D.gameObject.tag == "wall")
+        {
+            callentvelocity.x += playerrb.velocity.x/2;
+        }
         else if (collider2D.gameObject.tag == "player")
         {
             callentvelocity.x += playerrb.velocity.x/2;
