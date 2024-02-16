@@ -7,8 +7,7 @@ public class SquareCon : MonoBehaviour
     public GameObject square;
     void Start()
     {
-        Vector3 pos = transform.position;
-
+        Vector3 pos = new Vector3(0, 0, 0);
         for (int i = 0; i < 32; i++)
         {
             GameObject obj = Instantiate(square);
