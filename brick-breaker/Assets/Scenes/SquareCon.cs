@@ -14,6 +14,18 @@ public class SquareCon : MonoBehaviour
             pos.y += 0.3f;
             obj.transform.position = transform.position + pos;
         }
+        for (int i = 0; i < 36; i++)
+        {
+            GameObject obj = Instantiate(square);
+            pos.x += 0.6f;
+            obj.transform.position = transform.position + pos;
+        }
+        for (int i = 0; i < 32; i++)
+        {
+            GameObject obj = Instantiate(square);
+            pos.y -= 0.3f;
+            obj.transform.position = transform.position + pos;
+        }
 
     }
     void Update()
