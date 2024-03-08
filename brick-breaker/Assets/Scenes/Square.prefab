@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4756240733761732029}
   - component: {fileID: 4756240733761732028}
   m_Layer: 0
-  m_Name: Square_prefab
+  m_Name: Square
   m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

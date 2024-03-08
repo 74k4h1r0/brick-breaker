@@ -6,6 +6,7 @@ public class BlockCon : MonoBehaviour
 {
 
     public GameObject block;
+    public GameObject Square;
     void Start()
     {
         Vector3 pos = new Vector3(0, 0, 0);
@@ -14,9 +15,20 @@ public class BlockCon : MonoBehaviour
                 pos.x = 0;
                 for (int i = 0; i < 25; i++)
                 {
-                    GameObject obj = Instantiate(block);
                     pos.x += 0.8f;
-                    obj.transform.position = transform.position + pos;
+                    
+                    if(Random.Range(0,10) < 8)
+                    {
+                        GameObject obj = Instantiate(block);
+                        
+                        obj.transform.position = transform.position + pos;
+                    }
+                    else
+                    {
+                        GameObject obj = Instantiate(Square);
+
+                        obj.transform.position = transform.position + pos;
+                    }
                 }  
                 pos.y -= 0.5f;
             }
