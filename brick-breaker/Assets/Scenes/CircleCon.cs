@@ -7,6 +7,8 @@ public class CircleCon : MonoBehaviour
     Rigidbody2D rb;
     Vector2 callentvelocity;
     Rigidbody2D playerrb; 
+
+    public GameObject DropItem;
     void Start()
     {
         playerrb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
@@ -20,11 +22,17 @@ public class CircleCon : MonoBehaviour
     {
 
     }
+
+    Vector3 pos = new Vector3(0,0,0);
     void OnCollisionEnter2D(Collision2D collider2D)
     {
         callentvelocity.x += Random.Range(-1.5f, 1.5f);
         
-        if (collider2D.gameObject.tag == "Block")
+        if (collider2D.gameObject.tag == "Item")
+        {
+            Destroy(collider2D.gameObject);
+        }
+        else if (collider2D.gameObject.tag == "Block")
         {
             Destroy(collider2D.gameObject);
         }
