@@ -31,6 +31,9 @@ public class CircleCon : MonoBehaviour
         if (collider2D.gameObject.tag == "Item")
         {
             Destroy(collider2D.gameObject);
+            
+            GameObject obj = Instantiate(DropItem);            
+            obj.transform.position = transform.position + pos;
         }
         else if (collider2D.gameObject.tag == "Block")
         {

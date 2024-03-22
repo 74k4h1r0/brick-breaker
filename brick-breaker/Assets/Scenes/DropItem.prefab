@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 533893304922676038}
   - component: {fileID: 6350016636584553591}
   - component: {fileID: 2790061389567166908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DropItem
-  m_TagString: Untagged
+  m_TagString: DropItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
