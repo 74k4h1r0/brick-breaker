@@ -96,7 +96,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 6665547731881336936}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: f58e4b3c3ed324f4c91040cc977dcf00, type: 2}
+  m_Material: {fileID: 6200000, guid: 0786b5d2e718a43659395b2de872266a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -137,4 +137,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DropItem: {fileID: 5822076397669634712, guid: 5c710cf50c8434c77955d3ae0ec4b74a, type: 3}
-  Circle: {fileID: 6665547731881336936}

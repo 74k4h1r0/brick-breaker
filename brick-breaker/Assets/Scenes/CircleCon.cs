@@ -26,11 +26,15 @@ public class CircleCon : MonoBehaviour
     Vector3 pos = new Vector3(0,0,0);
     void OnCollisionEnter2D(Collision2D collider2D)
     {
-        callentvelocity.x += Random.Range(-1.5f, 1.5f);
+        float x = Random.Range(-0.8f, 0.8f);
+        float y = Random.Range(0f,1f);
+
+        Vector2 reflect= new Vector2(x,y).normalized;
         
         if (collider2D.gameObject.tag == "Item")
         {
             Destroy(collider2D.gameObject);
+            rb.velocity = new Vector2(callentvelocity.x, -callentvelocity.y);
             
             GameObject obj = Instantiate(DropItem);            
             obj.transform.position = transform.position + pos;
@@ -38,18 +42,22 @@ public class CircleCon : MonoBehaviour
         else if (collider2D.gameObject.tag == "Block")
         {
             Destroy(collider2D.gameObject);
+            rb.velocity = new Vector2(callentvelocity.x, -callentvelocity.y);
         }
         else if (collider2D.gameObject.tag == "wall")
         {
-            callentvelocity.x += playerrb.velocity.x/2;
+            //callentvelocity.x += playerrb.velocity.x/2;
+            rb.velocity = new Vector2(callentvelocity.x, -callentvelocity.y);
         }
-        else if (collider2D.gameObject.tag == "player")
+        else if (collider2D.gameObject.tag == "sideWall")
         {
-            callentvelocity.x += playerrb.velocity.x/2;
+            rb.velocity = new Vector2(-callentvelocity.x, callentvelocity.y);
         }
-
-        rb.velocity = new Vector2(callentvelocity.x, -callentvelocity.y);
-
+        else if (collider2D.gameObject.tag == "Player")
+        {
+            //callentvelocity.x += playerrb.velocity.x/2;
+            rb.velocity = reflect;
+        }
         callentvelocity = rb.velocity;
     }
 }
