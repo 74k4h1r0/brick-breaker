@@ -21,13 +21,13 @@ public class BlockCon : MonoBehaviour
                     
                     if(Random.Range(0,10) < 8)
                     {
-                        GameObject obj = Instantiate(Item);
+                        GameObject obj = Instantiate(block);
                         
                         obj.transform.position = transform.position + pos;
                     }
                     else if(Random.Range(0,10) < 5)
                     {
-                        GameObject  obj = Instantiate(block);
+                        GameObject  obj = Instantiate(Item);
 
                         obj.transform.position = transform.position + pos;
                     }
