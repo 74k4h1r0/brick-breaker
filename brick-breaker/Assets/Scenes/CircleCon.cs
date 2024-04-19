@@ -16,7 +16,7 @@ public class CircleCon : MonoBehaviour
     {
         playerRb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, 2);
+        rb.velocity = new Vector2(1, 2);
 
     }
 
@@ -27,7 +27,7 @@ public class CircleCon : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D collider2D)
+    void OntriggerEnter2D(Collider2D collider2D)
     {
         string gameObjectTag = collider2D.gameObject.tag;
         Vector3 newVelocity = rb.velocity;
@@ -35,8 +35,7 @@ public class CircleCon : MonoBehaviour
         if (gameObjectTag== "Item")
         {
             Destroy(collider2D.gameObject);
-            newVelocity = collider2D.relativeVelocity;
-            newVelocity.x *= -1;
+            newVelocity.y *= -1;
             
             GameObject obj = Instantiate(DropItem);            
             obj.transform.position = transform.position + pos;
@@ -45,32 +44,25 @@ public class CircleCon : MonoBehaviour
         {
             Debug.Log("Block");
             Destroy(collider2D.gameObject);
-            // rb.velocity = new Vector2(rb.velocity.x, -rb.velocity.y);
-            newVelocity= collider2D.relativeVelocity;
-            newVelocity.x *= -1;
+            newVelocity.y *= -1;
 
         }
         else if (gameObjectTag== "wall")
         {
-            newVelocity = collider2D.relativeVelocity;
-            newVelocity.x *= -1;
+            newVelocity.y *= -1;
 
         }
         else if (gameObjectTag== "sideWall")
         {
-            //rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
-            newVelocity = collider2D.relativeVelocity;
-            newVelocity.y *= -1;
-
+            Debug.Log(newVelocity);
+            newVelocity.x *= -1;
         }
         else if (gameObjectTag== "Player")
         {
-            float x = Random.Range(-0.8f, 0.8f);
-            float y = Random.Range(0f,1f);
-
-            Vector2 reflect= new Vector2(x,y).normalized;
-        
-            newVelocity= reflect;
+            Debug.Log(newVelocity);
+            Debug.Log(collider2D.gameObject.GetComponent<Rigidbody2D>().velocity);
+            Debug.Log("");
+            newVelocity.y *= -1;
         }
 
         rb.velocity = newVelocity.normalized * speed;
