@@ -6,6 +6,7 @@ public class PlayerCon : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject Circle;
+    public GameObject LongPlayer;
 
     void Start()
     {
@@ -14,11 +15,11 @@ public class PlayerCon : MonoBehaviour
     }    
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && transform.position.x < 9.5f)
         {
             rb.velocity = new Vector2(5, 0);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        else if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && transform.position.x > -9.5f)
         {
             rb.velocity = new Vector2(-5, 0);
         }
@@ -27,15 +28,34 @@ public class PlayerCon : MonoBehaviour
             rb.velocity = new Vector2(0, 0);      
         }
     }
-    Vector3 pos = new Vector3(0,0,0);
-    void OnCollisionEnter2D(Collision2D Collider2D)
+    void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if(Collider2D.gameObject.tag == "DropItem")
-        {
-            Destroy(Collider2D.gameObject);
+    Vector3 pos = new Vector3(0,0.4f,0);
+    Vector3 pos2 = new Vector3(0.3f,0.4f,0);
 
-            GameObject obj = Instantiate(Circle);            
-            obj.transform.position = transform.position + pos;
+        string gameObjectTag = collider2D.gameObject.tag;
+        if (gameObjectTag == "DropItem")
+        {
+            Destroy(collider2D.gameObject);
+            if(Random.Range(0,10) < 0)
+            {
+                GameObject obj = Instantiate(Circle);            
+                obj.transform.position = transform.position + pos;
+            }
+            else if(Random.Range(0,10) < 1)
+            {   
+                GameObject obj = Instantiate(Circle);            
+                obj.transform.position = transform.position + pos;
+                
+                GameObject obj2 = Instantiate(Circle);            
+                obj2.transform.position = transform.position + pos2;
+            }
+            else
+            {
+                GameObject obj = Instantiate(LongPlayer);            
+                obj.transform.position = transform.position;
+            }
         }
+
     }
 }

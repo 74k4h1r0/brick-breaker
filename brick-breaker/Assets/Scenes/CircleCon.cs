@@ -27,12 +27,12 @@ public class CircleCon : MonoBehaviour
     }
 
 
-    void OntriggerEnter2D(Collider2D collider2D)
+    void OnTriggerEnter2D(Collider2D collider2D)
     {
         string gameObjectTag = collider2D.gameObject.tag;
         Vector3 newVelocity = rb.velocity;
-
-        if (gameObjectTag== "Item")
+        Debug.Log(newVelocity);
+        if (gameObjectTag == "Item")
         {
             Destroy(collider2D.gameObject);
             newVelocity.y *= -1;
@@ -40,28 +40,25 @@ public class CircleCon : MonoBehaviour
             GameObject obj = Instantiate(DropItem);            
             obj.transform.position = transform.position + pos;
         }
-        else if (gameObjectTag== "Block")
+        else if (gameObjectTag == "Block")
         {
             Debug.Log("Block");
             Destroy(collider2D.gameObject);
             newVelocity.y *= -1;
 
         }
-        else if (gameObjectTag== "wall")
+        else if (gameObjectTag == "wall")
         {
             newVelocity.y *= -1;
 
         }
-        else if (gameObjectTag== "sideWall")
+        else if (gameObjectTag == "sideWall")
         {
             Debug.Log(newVelocity);
             newVelocity.x *= -1;
         }
         else if (gameObjectTag== "Player")
         {
-            Debug.Log(newVelocity);
-            Debug.Log(collider2D.gameObject.GetComponent<Rigidbody2D>().velocity);
-            Debug.Log("");
             newVelocity.y *= -1;
         }
 
