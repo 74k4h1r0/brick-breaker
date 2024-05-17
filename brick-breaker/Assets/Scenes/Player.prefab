@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 866386732646708948}
   - component: {fileID: 866386732646708951}
   - component: {fileID: 866386732646708944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Circle: {fileID: 6665547731881336936, guid: 1d87a7537b3da4c8999f5ea64cb6ec60, type: 3}
-  block: {fileID: 4510161411300160686, guid: b9f12daf83dfa4e33a95bf9d0ee40bc1, type: 3}
+  LongPlayer: {fileID: 0}
 --- !u!61 &866386732646708951
 BoxCollider2D:
   m_ObjectHideFlags: 0
