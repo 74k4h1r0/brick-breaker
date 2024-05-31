@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Circle: {fileID: 6665547731881336936, guid: 1d87a7537b3da4c8999f5ea64cb6ec60, type: 3}
-  LongPlayer: {fileID: 0}
+  LongPlayer: {fileID: 2775322695801402025, guid: b2726a50fcc3c489da7127ef4970888b, type: 3}
+  Player: {fileID: 866386732646708939}
 --- !u!61 &866386732646708951
 BoxCollider2D:
   m_ObjectHideFlags: 0

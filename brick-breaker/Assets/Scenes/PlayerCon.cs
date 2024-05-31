@@ -8,30 +8,15 @@ public class PlayerCon : MonoBehaviour
     public GameObject Circle;
     public GameObject LongPlayer;
     public GameObject Player;
-    public float displayDelay; //Lprayerの利用時間
 
-    private float timer;
-    private bool isDisplayd;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, 0);
-        //時間を初期化
-        timer = 0.0f;
-        isDisplayd = false;
     }    
     void Update()
     {
-        if(!isDisplayd)
-        {
-            timer += Time.deltaTime; //経過時間をカウント
-            if (timer >= displayDelay)
-            {
-                Destroy(gameObject);
-                Instantiate(Player);
-            }
-        }
         if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && transform.position.x < 9.5f)
         {
             rb.velocity = new Vector2(5, 0);
@@ -59,7 +44,7 @@ public class PlayerCon : MonoBehaviour
                 GameObject obj = Instantiate(Circle);            
                 obj.transform.position = transform.position + pos;
             }
-            else if(Random.Range(0,10) < 1)
+            else if(Random.Range(0,10) < 9)
             {   
                 GameObject obj = Instantiate(Circle);            
                 obj.transform.position = transform.position + pos;
@@ -69,7 +54,6 @@ public class PlayerCon : MonoBehaviour
             }
             else
             {
-                displayDelay = 2.0f;
                 GameObject obj = Instantiate(LongPlayer);            
                 obj.transform.position = transform.position;
                 Destroy(gameObject);

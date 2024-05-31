@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CircleCon : MonoBehaviour
 {
+    static int circleCount = 0;
     Rigidbody2D rb;
-    Rigidbody2D playerRb; 
     Vector3 pos = new Vector3(0,0,0);
-
+    
 
 
     public GameObject DropItem;
     public float speed = 1;
     void Start()
     {
-        playerRb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        circleCount++;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(1, 2);
 
@@ -23,7 +24,15 @@ public class CircleCon : MonoBehaviour
     void Update()
     {
         rb.velocity = rb.velocity.normalized * speed;
-
+        if (transform.position.y <= -5.0f)
+        {
+            circleCount--;
+            Destroy(gameObject);
+            if(circleCount == 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
     }
 
 
@@ -64,4 +73,5 @@ public class CircleCon : MonoBehaviour
 
         rb.velocity = newVelocity.normalized * speed;
     }
+
 }
