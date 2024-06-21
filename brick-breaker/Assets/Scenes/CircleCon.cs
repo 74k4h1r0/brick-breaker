@@ -8,21 +8,25 @@ public class CircleCon : MonoBehaviour
     static int circleCount = 0;
     Rigidbody2D rb;
     Vector3 pos = new Vector3(0,0,0);
-    
 
+    ScoreDirector scorecon;
 
     public GameObject DropItem;
     public float speed = 1;
+
+    bool bonusPT = false;
     void Start()
     {
         circleCount++;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(1, 2);
+        scorecon = GameObject.Find("ScoreDirector").GetComponent<ScoreDirector>();
 
     }
 
     void Update()
     {
+        
         rb.velocity = rb.velocity.normalized * speed;
         if (transform.position.y <= -5.0f)
         {
@@ -65,6 +69,17 @@ public class CircleCon : MonoBehaviour
                 newVelocity.y *= -1; 
             }
             Destroy(collider2D.gameObject);
+            if (bonusPT)
+            {
+                scorecon.setScore(40);
+            }
+            else
+            {
+                scorecon.setScore(20);
+            }
+
+            bonusPT = true;
+
         }
         else if (gameObjectTag == "wall")
         {
@@ -81,6 +96,8 @@ public class CircleCon : MonoBehaviour
             Vector3 direction = (ballPos - targetPos).normalized;
             newVelocity = direction * speed;
             newVelocity.x *= -1;
+
+            bonusPT = false;
         }
 
         rb.velocity = newVelocity.normalized * speed;
