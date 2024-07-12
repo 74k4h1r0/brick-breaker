@@ -9,6 +9,7 @@ public class ScoreDirector : MonoBehaviour
     GameObject ScoreText;
     void Start()
     {
+        score = 0;
         ScoreText = GameObject.Find("ScoreText");
     }
 

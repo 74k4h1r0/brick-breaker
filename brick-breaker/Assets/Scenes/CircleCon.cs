@@ -10,6 +10,7 @@ public class CircleCon : MonoBehaviour
     Vector3 pos = new Vector3(0,0,0);
 
     ScoreDirector scorecon;
+    BlockCon blockCon;
 
     public GameObject DropItem;
     public float speed = 1;
@@ -21,7 +22,7 @@ public class CircleCon : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(1, 2);
         scorecon = GameObject.Find("ScoreDirector").GetComponent<ScoreDirector>();
-
+        blockCon = GameObject.Find("BlockGenerator").GetComponent<BlockCon>();
     }
 
     void Update()
@@ -36,6 +37,11 @@ public class CircleCon : MonoBehaviour
             {
                 SceneManager.LoadScene("GameOver");
             }
+        }
+                    
+        if(blockCon.ClearTerms == 0)
+        {
+            SceneManager.LoadScene("ClearScene");
         }
     }
 
@@ -52,8 +58,21 @@ public class CircleCon : MonoBehaviour
             Destroy(collider2D.gameObject);
             newVelocity.y *= -1;
             
+            if (bonusPT)
+            {
+                scorecon.setScore(40);
+            }
+            else
+            {
+                scorecon.setScore(20);
+            }
+
+            bonusPT = true;
+            
             GameObject obj = Instantiate(DropItem);            
             obj.transform.position = transform.position + pos;
+
+            blockCon.ClearTerms--;
         }
         else if (gameObjectTag == "Block")
         {
@@ -80,6 +99,8 @@ public class CircleCon : MonoBehaviour
 
             bonusPT = true;
 
+            blockCon.ClearTerms--;
+
         }
         else if (gameObjectTag == "wall")
         {
@@ -99,6 +120,7 @@ public class CircleCon : MonoBehaviour
 
             bonusPT = false;
         }
+        Debug.Log(blockCon.ClearTerms);
 
         rb.velocity = newVelocity.normalized * speed;
     }

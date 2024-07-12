@@ -431,6 +431,7 @@ MonoBehaviour:
   block: {fileID: 4510161411300160686, guid: b9f12daf83dfa4e33a95bf9d0ee40bc1, type: 3}
   Square: {fileID: 4756240733761732023, guid: dace30690542c44c5ac6da535fe2f4cd, type: 3}
   Item: {fileID: 8925076614982124313, guid: e10ac8b9818a24e23a5e18b137badef6, type: 3}
+  ClearTerms: 0
 --- !u!1 &832993082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 866386732646708948, guid: ddd18d26634634a3596cf165bfd12c7f, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 4510161411300160686, guid: b9f12daf83dfa4e33a95bf9d0ee40bc1, type: 3}
     - target: {fileID: 866386732646708948, guid: ddd18d26634634a3596cf165bfd12c7f, type: 3}
       propertyPath: Player
       value: 

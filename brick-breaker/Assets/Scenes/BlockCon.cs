@@ -9,8 +9,12 @@ public class BlockCon : MonoBehaviour
     public GameObject Square;
 
     public GameObject Item;
+
+    public int ClearTerms = 0;
+    
     void Start()
     {
+        ClearTerms++;
         Vector3 pos = new Vector3(0, 0, 0);
         for (int t = 0; t < 6; t++)
             {
@@ -24,12 +28,14 @@ public class BlockCon : MonoBehaviour
                         GameObject obj = Instantiate(block);
                         
                         obj.transform.position = transform.position + pos;
+                        ClearTerms++;
                     }
                     else if(Random.Range(0,10) < 5)
                     {
                         GameObject  obj = Instantiate(Item);
 
                         obj.transform.position = transform.position + pos;
+                        ClearTerms++;
                     }
                     else
                     {

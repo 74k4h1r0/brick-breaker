@@ -9,7 +9,6 @@ public class PlayerCon : MonoBehaviour
     public GameObject LongPlayer;
     public GameObject Player;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
