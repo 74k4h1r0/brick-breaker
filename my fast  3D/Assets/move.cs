@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    public float speed = 2;
+    Vector3 movingDirection;
+    public float speedMagnification;
+    public Rigidbody rb;
+    public Vector3 movingVelocity;
 
-    float vx = 0;
-    float vz = 0;
+    private bool jumpNow;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        vx = Input.GetAxisRaw("Horizontal")*speed;
-        vz = Input.GetAxisRaw("Vertical")*speed;
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+        movingDirection = new Vector3(x,0,z);
+        movingDirection.Normalize();
+        movingVelocity = movingDirection * speedMagnification;
+        Debug.Log(movingVelocity);
     }
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        this.transform.Translate(vx/50,0,vz/50);
+        if(jumpNow == true) return;
+        rb.velocity = new Vector3(movingVelocity.x, rb.velocity.y, movingVelocity.z);
     }
 
 }
