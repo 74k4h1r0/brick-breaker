@@ -9,10 +9,13 @@ public class move : MonoBehaviour
     public Rigidbody rb;
     public Vector3 movingVelocity;
 
+    private Animator anim = null;
+
     private bool jumpNow;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -22,8 +25,20 @@ public class move : MonoBehaviour
         movingDirection = new Vector3(x,0,z);
         movingDirection.Normalize();
         movingVelocity = movingDirection * speedMagnification;
-        Debug.Log(movingVelocity);
+        if (z > 0)
+        {
+            anim.SetBool("RUN",true);
+        }
+        else if (z < 0)
+        {
+            anim.SetBool("RUN",true);
+        }
+        else
+        {
+            anim.SetBool("RUN",false);
+        }
     }
+
     void FixedUpdate()
     {
         if(jumpNow == true) return;

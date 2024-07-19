@@ -322,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_LocalPosition.z
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 818465392}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,9 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342fe97acb3b9445bb74edfce8dba050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMagnification: 0
+  speedMagnification: 1
   rb: {fileID: 0}
-  movingVelocity: {x: 0, y: 0, z: 0}
+  movingVelocity: {x: 10, y: 0, z: 10}
 --- !u!136 &1854419978
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -490,10 +490,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.18
+  m_Height: 1.46
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.74, z: 0}
 --- !u!54 &1854419979
 Rigidbody:
   m_ObjectHideFlags: 0
