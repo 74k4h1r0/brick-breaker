@@ -11,8 +11,11 @@ public class move : MonoBehaviour
 
     private Animator anim = null;
 
+    float speed = 2.5f;
+    float angleSpeed = 200;
+
     private bool jumpNow;
-    public float jumpPower; //unity内で調整が必須らしい
+    public float jumpPower; 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,24 +24,22 @@ public class move : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
-        movingDirection = new Vector3(x,0,z);
-        movingDirection.Normalize();
-        movingVelocity = movingDirection * speedMagnification;
+        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
+        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+
         if (z != 0)
         {
-            anim.SetBool("RUN",true);
-        }
-        else if (x != 0)
-        {
+            transform.position += transform.forward * z ;
             anim.SetBool("RUN",true);
         }
         else
         {
+            transform.position += transform.forward * z / 3;
             anim.SetBool("RUN",false);
         }
 
+        transform.Rotate(Vector3.up * x);
+        
         Jump();
     }
 
@@ -67,7 +68,6 @@ public class move : MonoBehaviour
     void FixedUpdate()
     {
         if(jumpNow == true) return;
-        rb.velocity = new Vector3(movingVelocity.x, rb.velocity.y, movingVelocity.z);
     }
 
 }

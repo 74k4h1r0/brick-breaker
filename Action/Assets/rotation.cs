@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class rotation : MonoBehaviour
 {
-    Vector3 latestPos;
-    public Rigidbody rb;
+    Vector3 movingDirection;
+    public float speedMagnification;
+    public Vector3 movingVelocity;
+    float speed = 2.5f;
 
-    public void FixedUpdate()
+    void Start()
     {
-        Vector3 differenceDis = new Vector3(transform.position.x, 0, transform.position.z) - new Vector3(latestPos.x, 0, latestPos.z);
-        
-        latestPos = transform.position;
-        if (Mathf.Abs(differenceDis.x) > 0.001f || Mathf.Abs(differenceDis.z) > 0.001f)
+    }
+    void Update()
+    {
+        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+
+        if (z != 0)
         {
-            Quaternion rot = Quaternion.LookRotation(differenceDis);
-            rot = Quaternion.Slerp(rb.transform.rotation, rot, 0.2f);
-            this.transform.rotation = rot;
+            transform.position += transform.forward * z ;
+        }
+        else
+        {
+            transform.position += transform.forward * z / 3;
         }
     }
 }
