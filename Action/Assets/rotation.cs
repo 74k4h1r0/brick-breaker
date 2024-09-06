@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class rotation : MonoBehaviour
 {
-    Vector3 movingDirection;
-    public float speedMagnification;
-    public Vector3 movingVelocity;
-    float speed = 2.5f;
+    public GameObject playerObj;
+    private Vector3 offset;
+    float angleSpeed = 200;
+
 
     void Start()
     {
+        playerObj = GameObject.Find("unitychan");
+        offset = transform.position - playerObj.transform.position;
     }
-    void Update()
-    {
-        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
 
-        if (z != 0)
-        {
-            transform.position += transform.forward * z ;
-        }
-        else
-        {
-            transform.position += transform.forward * z / 3;
-        }
+    void LateUpdate()
+    {
+        transform.position = playerObj.transform.position + offset;
+        
+        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
+        transform.RotateAround(playerObj.transform.position, Vector3.up, x);
     }
 }
