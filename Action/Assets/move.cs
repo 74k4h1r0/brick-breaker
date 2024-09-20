@@ -27,18 +27,27 @@ public class move : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
         float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
 
-        if (z != 0)
+        if (z > 0)
         {
-            transform.position += transform.forward * z ;
+            transform.position += transform.forward * z;
             anim.SetBool("RUN",true);
+            transform.Rotate(Vector3.up * x);
+
+        }
+        else if(z < 0)
+        {
+            transform.position += transform.forward * z;
+            anim.SetBool("RUN",true);
+            // transform.Rotate(Vector3.up * 180);
         }
         else
         {
             transform.position += transform.forward * z / 3;
             anim.SetBool("RUN",false);
+            transform.Rotate(Vector3.up * x);
+
         }
 
-        transform.Rotate(Vector3.up * x);
         
         Jump();
     }
