@@ -18,6 +18,8 @@ public class move : MonoBehaviour
     public float jumpPower; 
     void Start()
     {
+        transform.localScale = new Vector3(0.8f,0.8f,0.8f);
+
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -30,6 +32,9 @@ public class move : MonoBehaviour
         if (z > 0)
         {
             transform.position += transform.forward * z;
+            Vector3 localScale = transform.localScale;
+            localScale.z = 0.8f;
+            transform.localScale = localScale;
             anim.SetBool("RUN",true);
             transform.Rotate(Vector3.up * x);
 
@@ -37,8 +42,11 @@ public class move : MonoBehaviour
         else if(z < 0)
         {
             transform.position += transform.forward * z;
+            Vector3 localScale = transform.localScale;
+            localScale.z = -0.8f;
+            transform.localScale = localScale;
             anim.SetBool("RUN",true);
-            // transform.Rotate(Vector3.up * 180);
+            transform.Rotate(Vector3.up * x);
         }
         else
         {
