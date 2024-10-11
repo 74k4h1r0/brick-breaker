@@ -8,10 +8,14 @@ public class Enemy_Anim : MonoBehaviour
     public float moveSpeed;
     public float stopDistance;
     public float moveDistance;
+    public float attackDistance;
+    public float friendlyDistance;
+
+    private Animator e_anim = null;
 
     void Start()
     {
-        
+        e_anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -21,9 +25,20 @@ public class Enemy_Anim : MonoBehaviour
         transform.LookAt(targetPos);
 
         float distance = Vector3.Distance(transform.position, target.position);
-        if (distance < moveDistance && distance > stopDistance)
+        if (distance < friendlyDistance && distance > attackDistance)
+        {
+            e_anim.SetBool("Basic Attack", true);
+        }
+        else if (distance < moveDistance && distance > stopDistance)
         {
             transform.position = transform.position + transform.forward * moveSpeed * Time.deltaTime;
+            e_anim.SetBool("Basic Attack",false);
+            e_anim.SetBool("Walk",true);
+        }
+        else
+        {
+            e_anim.SetBool("Basic Attack",false);
+            e_anim.SetBool("Walk",false);
         }
     }
 }
