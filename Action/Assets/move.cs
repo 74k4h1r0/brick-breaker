@@ -15,7 +15,10 @@ public class move : MonoBehaviour
     float angleSpeed = 200;
 
     private bool jumpNow;
-    public float jumpPower; 
+    public float jumpPower;
+
+    private bool SLIDE;
+    public float SLIDEbalance;
     void Start()
     {
         transform.localScale = new Vector3(0.8f,0.8f,0.8f);
@@ -36,6 +39,7 @@ public class move : MonoBehaviour
             localScale.z = 0.8f;
             transform.localScale = localScale;
             anim.SetBool("RUN",true);
+            SLIDE = false;
             transform.Rotate(Vector3.up * x);
 
         }
@@ -46,6 +50,7 @@ public class move : MonoBehaviour
             localScale.z = -0.8f;
             transform.localScale = localScale;
             anim.SetBool("RUN",true);
+            SLIDE = false;
             transform.Rotate(Vector3.up * x);
         }
         else
@@ -56,7 +61,7 @@ public class move : MonoBehaviour
 
         }
 
-        
+        Slide();
         Jump();
     }
 
@@ -82,8 +87,20 @@ public class move : MonoBehaviour
         }
     }
 
+    void Slide()
+    {
+        if(SLIDE == true) return;
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.AddForce(transform.position * SLIDEbalance, ForceMode.Impulse);
+            SLIDE = true;
+            anim.SetTrigger("SLIDE");
+        }
+    }
+
     void FixedUpdate()
     {
+        if(SLIDE == true) return;
         if(jumpNow == true) return;
     }
 
