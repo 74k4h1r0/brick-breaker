@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class Hit_Con : MonoBehaviour
 {
+    private bool hit = false;
+
     public void Hit()
     {
-        Debug.Log("Hit");
+        hit = true;
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (hit == true)
+        {
+            hit = false;
+        }
+        
+    }
 }

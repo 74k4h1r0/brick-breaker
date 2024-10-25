@@ -19,12 +19,16 @@ public class move : MonoBehaviour
 
     private bool SLIDE;
     public float SLIDEbalance;
+
+    CapsuleCollider slide_collider;
+    
     void Start()
     {
         transform.localScale = new Vector3(0.8f,0.8f,0.8f);
 
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        slide_collider = GetComponent<CapsuleCollider>();
     }
 
     void Update()
@@ -92,6 +96,7 @@ public class move : MonoBehaviour
         if(SLIDE == true) return;
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
+            slide_collider.enabled = false;
             rb.AddForce(transform.position * SLIDEbalance, ForceMode.Impulse);
             SLIDE = true;
             anim.SetTrigger("SLIDE");
