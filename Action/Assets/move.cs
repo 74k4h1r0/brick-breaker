@@ -20,6 +20,8 @@ public class move : MonoBehaviour
     private bool SLIDE;
     public float SLIDEbalance;
 
+    public bool Invb = true;
+
     CapsuleCollider slide_collider;
     
     void Start()
@@ -96,7 +98,8 @@ public class move : MonoBehaviour
         if(SLIDE == true) return;
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            slide_collider.enabled = false;
+            //slide_collider.enabled = false;
+            //Invb = true;
             rb.AddForce(transform.position * SLIDEbalance, ForceMode.Impulse);
             SLIDE = true;
             anim.SetTrigger("SLIDE");
