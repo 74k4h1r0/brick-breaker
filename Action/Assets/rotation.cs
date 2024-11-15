@@ -19,8 +19,11 @@ public class rotation : MonoBehaviour
     {
         transform.position += playerObj.transform.position - playerPos;
         playerPos = playerObj.transform.position;
-        
-        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
-        transform.RotateAround(playerObj.transform.position, Vector3.up, x);
+                
+        if(playerObj.GetComponent<move>().SLIDE == false)
+        {
+            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
+            transform.RotateAround(playerObj.transform.position, Vector3.up, x);
+        }
     }
 }

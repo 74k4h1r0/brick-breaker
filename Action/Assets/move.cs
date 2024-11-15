@@ -17,10 +17,12 @@ public class move : MonoBehaviour
     private bool jumpNow;
     public float jumpPower;
 
-    private bool SLIDE;
+    public bool SLIDE;
     public float SLIDEbalance;
 
     public bool Invb = true;
+
+    public GameObject Capsule;
 
     CapsuleCollider slide_collider;
     
@@ -31,42 +33,45 @@ public class move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         slide_collider = GetComponent<CapsuleCollider>();
+
+        Capsule.SetActive(false);
     }
 
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * angleSpeed;
         float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
-
-        if (z > 0)
+        if(SLIDE == false)
         {
-            transform.position += transform.forward * z;
-            Vector3 localScale = transform.localScale;
-            localScale.z = 0.8f;
-            transform.localScale = localScale;
-            anim.SetBool("RUN",true);
-            SLIDE = false;
-            transform.Rotate(Vector3.up * x);
+            if (z > 0)
+            {
+                transform.position += transform.forward * z;
+                Vector3 localScale = transform.localScale;
+                localScale.z = 0.8f;
+                transform.localScale = localScale;
+                anim.SetBool("RUN",true);
+                SLIDE = false;
+                transform.Rotate(Vector3.up * x);
 
-        }
-        else if(z < 0)
-        {
-            transform.position += transform.forward * z;
-            Vector3 localScale = transform.localScale;
-            localScale.z = -0.8f;
-            transform.localScale = localScale;
-            anim.SetBool("RUN",true);
-            SLIDE = false;
-            transform.Rotate(Vector3.up * x);
-        }
-        else
-        {
-            transform.position += transform.forward * z / 3;
-            anim.SetBool("RUN",false);
-            transform.Rotate(Vector3.up * x);
+            }
+            else if(z < 0)
+            {
+                transform.position += transform.forward * z;
+                Vector3 localScale = transform.localScale;
+                localScale.z = -0.8f;
+                transform.localScale = localScale;
+                anim.SetBool("RUN",true);
+                SLIDE = false;
+                transform.Rotate(Vector3.up * x);
+            }
+            else
+            {
+                transform.position += transform.forward * z / 3;
+                anim.SetBool("RUN",false);
+                transform.Rotate(Vector3.up * x);
 
+            }
         }
-
         Slide();
         Jump();
     }
@@ -98,9 +103,8 @@ public class move : MonoBehaviour
         if(SLIDE == true) return;
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            //slide_collider.enabled = false;
-            //Invb = true;
-            rb.AddForce(transform.position * SLIDEbalance, ForceMode.Impulse);
+            Capsule.SetActive(true);
+            rb.AddForce(transform.forward * SLIDEbalance, ForceMode.Impulse);
             SLIDE = true;
             anim.SetTrigger("SLIDE");
         }
@@ -110,6 +114,12 @@ public class move : MonoBehaviour
     {
         if(SLIDE == true) return;
         if(jumpNow == true) return;
+    }
+
+    public void EndSlide()
+    {
+        SLIDE = false;
+        Capsule.SetActive(false);
     }
 
 }
