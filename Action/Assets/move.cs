@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class move : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class move : MonoBehaviour
 
     public bool Invb = true;
 
+    int maxHp = 80;
+    int currentHp;
+    public Slider hp;
+    public int dec = 20;
+
     public GameObject Capsule;
 
     CapsuleCollider slide_collider;
@@ -33,6 +39,9 @@ public class move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         slide_collider = GetComponent<CapsuleCollider>();
+
+        hp.value = 1;
+        currentHp = maxHp;
 
         Capsule.SetActive(false);
     }
@@ -85,6 +94,12 @@ public class move : MonoBehaviour
                 jumpNow = false;
             }
         }
+    }
+
+    public void Dec()
+    {
+        currentHp = currentHp - dec;
+        hp.value = (float)currentHp / (float)maxHp;
     }
 
     void Jump()

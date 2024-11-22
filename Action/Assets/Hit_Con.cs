@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hit_Con : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Hit_Con : MonoBehaviour
     {
         if (hit == true && script.Invb == false)
         {
+            script.Dec();
             hit = false;
             Debug.Log("hit");
         }
@@ -33,4 +35,5 @@ public class Hit_Con : MonoBehaviour
         }
         
     }
+
 }
