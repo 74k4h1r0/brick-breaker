@@ -28,6 +28,10 @@ public class move : MonoBehaviour
     public Slider hp;
     public int dec = 20;
 
+    public GameObject GameOverUIPrefab;
+    private GameObject GameOverUIInstance;
+    public Transform parent;
+
     public GameObject Capsule;
 
     CapsuleCollider slide_collider;
@@ -100,6 +104,12 @@ public class move : MonoBehaviour
     {
         currentHp = currentHp - dec;
         hp.value = (float)currentHp / (float)maxHp;
+        if(currentHp <= 0)
+        {
+            GameOverUIInstance = GameObject.Instantiate(GameOverUIPrefab,parent) as GameObject;
+            Debug.Log("GAMEOVER");
+            Time.timeScale = 0f;
+        }
     }
 
     void Jump()
