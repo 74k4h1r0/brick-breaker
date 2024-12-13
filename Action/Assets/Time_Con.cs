@@ -7,10 +7,12 @@ using TMPro;
 public class Time_Con : MonoBehaviour
 {
     GameObject timerText;
-    float time = 10.0f;
+    public float time = 20.0f;
 
     public GameObject GameClearPanel;
     private bool panel2 = false;
+
+    public float TimerStart = 1;
 
     void Start()
     {
@@ -20,8 +22,11 @@ public class Time_Con : MonoBehaviour
 
     void Update()
     {
-        this.time -= Time.deltaTime;
-        this.timerText.GetComponent<TextMeshProUGUI>().text = this.time.ToString("F1");
+        if(TimerStart == 0)
+        {
+            this.time -= Time.deltaTime;
+            this.timerText.GetComponent<TextMeshProUGUI>().text = this.time.ToString("F1");
+        }
         GC();
     }
 

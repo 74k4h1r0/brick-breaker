@@ -9,10 +9,15 @@ public class Hit_Con : MonoBehaviour
     GameObject unitychan;
     move script; 
 
+    GameObject Gamedirector;
+    Time_Con TimeScript;
+
     void Start()
     {
         unitychan = GameObject.Find("unitychan");
         script = unitychan.GetComponent<move>();
+        Gamedirector = GameObject.Find("Gamedirector");
+        TimeScript = Gamedirector.GetComponent<Time_Con>();
     }
 
     public void Hit()
@@ -28,12 +33,16 @@ public class Hit_Con : MonoBehaviour
             hit = false;
             Debug.Log("hit");
         }
+        else if(hit == true && script.SLIDE == true)
+        {
+            script.Invb = false;
+            TimeScript.time = TimeScript.time - 5f;
+            //Debug.Log("Nohit");
+        }
         else
         {
             script.Invb = false;
-            //Debug.Log("Nohit");
         }
-        
     }
 
 }

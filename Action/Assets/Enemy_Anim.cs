@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy_Anim : MonoBehaviour
 {
@@ -13,9 +14,14 @@ public class Enemy_Anim : MonoBehaviour
 
     private Animator e_anim = null;
 
+    GameObject Gamedirector;
+    Time_Con script;
+
     void Start()
     {
         e_anim = GetComponent<Animator>();
+        Gamedirector = GameObject.Find("Gamedirector");
+        script = Gamedirector.GetComponent<Time_Con>();
     }
 
     void Update()
@@ -34,6 +40,7 @@ public class Enemy_Anim : MonoBehaviour
             transform.position = transform.position + transform.forward * moveSpeed * Time.deltaTime;
             e_anim.SetBool("Basic Attack",false);
             e_anim.SetBool("Walk",true);
+            script.TimerStart = 0;
         }
         else
         {

@@ -126,8 +126,8 @@ public class move : MonoBehaviour
 
     void Slide()
     {
-        if(SLIDE == true) return;
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(SLIDE == true) return;                 //RUN状態以外でスライドができないようにプログラムする
+        if(Input.GetKeyDown(KeyCode.LeftShift) && anim.GetCurrentAnimatorStateInfo(0).IsName("RUN"))
         {
             Capsule.SetActive(true);
             rb.AddForce(transform.forward * SLIDEbalance, ForceMode.Impulse);
