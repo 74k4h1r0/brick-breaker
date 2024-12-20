@@ -126,13 +126,14 @@ public class move : MonoBehaviour
 
     void Slide()
     {
-        if(SLIDE == true) return;                 //RUN状態以外でスライドができないようにプログラムする
-        if(Input.GetKeyDown(KeyCode.LeftShift) && anim.GetCurrentAnimatorStateInfo(0).IsName("RUN"))
+        if(SLIDE == true) return;
+        if(Input.GetKeyDown(KeyCode.LeftShift)&&anim.GetCurrentAnimatorStateInfo(0).IsName("RUN00_F"))
         {
             Capsule.SetActive(true);
             rb.AddForce(transform.forward * SLIDEbalance, ForceMode.Impulse);
             SLIDE = true;
             anim.SetTrigger("SLIDE");
+            EndSlide();
         }
     }
 
