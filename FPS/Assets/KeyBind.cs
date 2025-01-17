@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class KeyBind : MonoBehaviour
 {
+    Rigidbody rb;
+
     float x, z;
-    float speed = 0.1f;
+    float speed = 0.01f;
 
     public GameObject cam;
     Quaternion cameraRot, characterRot;
@@ -16,11 +18,14 @@ public class KeyBind : MonoBehaviour
     //変数の宣言(角度の制限用)
     float minX = -90f, maxX = 90f;
 
+    public float jumpPower;
+
     // Start is called before the first frame update
     void Start()
     {
         cameraRot = cam.transform.localRotation;
         characterRot = transform.localRotation;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -40,15 +45,21 @@ public class KeyBind : MonoBehaviour
 
 
         UpdateCursorLock();
+        keyBind();
     }
 
-    private void FixedUpdate()
+    void keyBind()
     {
         x = 0;
         z = 0;
 
         x = Input.GetAxisRaw("Horizontal") * speed;
         z = Input.GetAxisRaw("Vertical") * speed;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(transform.up * jumpPower);
+        }
 
         //transform.position += new Vector3(x,0,z);
 
