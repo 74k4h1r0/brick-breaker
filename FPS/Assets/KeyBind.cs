@@ -5,9 +5,11 @@ using UnityEngine;
 public class KeyBind : MonoBehaviour
 {
     Rigidbody rb;
+    private float distance;
+    private bool isGround;
 
     float x, z;
-    float speed = 0.01f;
+    float speed = 3.0f;
 
     public GameObject cam;
     Quaternion cameraRot, characterRot;
@@ -26,6 +28,7 @@ public class KeyBind : MonoBehaviour
         cameraRot = cam.transform.localRotation;
         characterRot = transform.localRotation;
         rb = GetComponent<Rigidbody>();
+        distance = 2.0f;
     }
 
     // Update is called once per frame
@@ -43,6 +46,12 @@ public class KeyBind : MonoBehaviour
         cam.transform.localRotation = cameraRot;
         transform.localRotation = characterRot;
 
+        RaycastHit hit;
+
+        Vector3 rayPosition = transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+        Ray ray = new Ray(rayPosition, Vector3.down);
+        isGround = Physics.Raycast(ray, out hit, distance);
+        Debug.DrawRay(rayPosition, Vector3.down * distance, Color.red);
 
         UpdateCursorLock();
         keyBind();
@@ -53,17 +62,37 @@ public class KeyBind : MonoBehaviour
         x = 0;
         z = 0;
 
-        x = Input.GetAxisRaw("Horizontal") * speed;
-        z = Input.GetAxisRaw("Vertical") * speed;
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.velocity = transform.forward * speed;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.velocity = -transform.forward * speed;
+        }
+
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = transform.right * speed;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            rb.velocity = -transform.right * speed;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(transform.up * jumpPower);
+            if(isGround)
+            {
+                rb.AddForce(transform.up * jumpPower);
+            }
+            Debug.Log(isGround);
         }
 
         //transform.position += new Vector3(x,0,z);
 
-        transform.position += cam.transform.forward * z + cam.transform.right * x;
+        //transform.position += cam.transform.forward * z + cam.transform.right * x;
     }
 
 
