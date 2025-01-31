@@ -7,6 +7,10 @@ public class KeyBind : MonoBehaviour
     Rigidbody rb;
     private float distance;
     private bool isGround;
+    private float Dashspeed;
+    private float Defaspeed;
+
+    public List<GunCon> guns = new List<GunCon>();
 
     float x, z;
     float speed = 3.0f;
@@ -53,32 +57,37 @@ public class KeyBind : MonoBehaviour
         isGround = Physics.Raycast(ray, out hit, distance);
         Debug.DrawRay(rayPosition, Vector3.down * distance, Color.red);
 
+        Dashspeed = 4.5f;
+        Defaspeed = 3.0f;
+
         UpdateCursorLock();
         keyBind();
     }
 
     void keyBind()
     {
-        x = 0;
-        z = 0;
+        Vector3 yspeed = new Vector3 (0f,rb.velocity.y,0f);
 
-        if (Input.GetKey(KeyCode.W))
+        float x = Input.GetAxisRaw("Horizontal");
+        float z = Input.GetAxisRaw("Vertical");
+
+        if (z > 0) 
         {
-            rb.velocity = transform.forward * speed;
+            rb.velocity = transform.forward * speed + yspeed;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (z < 0)
         {
-            rb.velocity = -transform.forward * speed;
+            rb.velocity = -transform.forward * speed + yspeed;
         }
 
 
-        if (Input.GetKey(KeyCode.D))
+        if (x > 0)
         {
-            rb.velocity = transform.right * speed;
+            rb.velocity = transform.right * speed + yspeed;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (x < 0)
         {
-            rb.velocity = -transform.right * speed;
+            rb.velocity = -transform.right * speed + yspeed;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -90,11 +99,15 @@ public class KeyBind : MonoBehaviour
             Debug.Log(isGround);
         }
 
-        //transform.position += new Vector3(x,0,z);
-
-        //transform.position += cam.transform.forward * z + cam.transform.right * x;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = Dashspeed;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed = Defaspeed;
+        }
     }
-
 
     public void UpdateCursorLock()
     {
