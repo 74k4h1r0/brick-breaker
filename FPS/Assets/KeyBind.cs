@@ -35,7 +35,6 @@ public class KeyBind : MonoBehaviour
         distance = 2.0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float xRot = Input.GetAxis("Mouse X") * Ysensityvity;
@@ -44,7 +43,6 @@ public class KeyBind : MonoBehaviour
         cameraRot *= Quaternion.Euler(-yRot, 0, 0);
         characterRot *= Quaternion.Euler(0, xRot, 0);
 
-        //Updateの中で作成した関数を呼ぶ
         cameraRot = ClampRotation(cameraRot);
 
         cam.transform.localRotation = cameraRot;
