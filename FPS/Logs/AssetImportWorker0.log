@@ -5842,3 +5842,735 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004944 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.841 seconds
+Domain Reload Profiling:
+	ReloadAssembly (841ms)
+		BeginReloadAssembly (169ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (601ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (224ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (213ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (141ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3356 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.0 KB). Loaded Objects now: 4135.
+Memory consumption went from 157.7 MB to 157.7 MB.
+Total: 3.416583 ms (FindLiveObjects: 0.355625 ms CreateObjectMapping: 0.072250 ms MarkObjects: 2.926166 ms  DeleteObjects: 0.061125 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 56770.588917 seconds.
+  path: Assets/ShotCon.cs
+  artifactKey: Guid(a9974c072547b4e38aae5cb394baef59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShotCon.cs using Guid(a9974c072547b4e38aae5cb394baef59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b93645625c17c8786bed9778ae57677e') in 0.007559 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005147 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.615 seconds
+Domain Reload Profiling:
+	ReloadAssembly (615ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (453ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (174ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (175ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (38ms)
+				ProcessInitializeOnLoadAttributes (117ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.18 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.1 KB). Loaded Objects now: 4139.
+Memory consumption went from 157.8 MB to 157.8 MB.
+Total: 2.270917 ms (FindLiveObjects: 0.151083 ms CreateObjectMapping: 0.046792 ms MarkObjects: 2.058042 ms  DeleteObjects: 0.014500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7.779071 seconds.
+  path: Assets/GunCon.cs
+  artifactKey: Guid(73035732ec07246e8a81c399be11bfc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GunCon.cs using Guid(73035732ec07246e8a81c399be11bfc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b292d0bfe5e30832853b0ead878d9d') in 0.006480 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004821 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.737 seconds
+Domain Reload Profiling:
+	ReloadAssembly (738ms)
+		BeginReloadAssembly (190ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (92ms)
+		EndReloadAssembly (486ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (187ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (176ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (39ms)
+				ProcessInitializeOnLoadAttributes (117ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.1 KB). Loaded Objects now: 4142.
+Memory consumption went from 157.9 MB to 157.9 MB.
+Total: 2.394542 ms (FindLiveObjects: 0.145750 ms CreateObjectMapping: 0.045166 ms MarkObjects: 2.179584 ms  DeleteObjects: 0.023250 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004678 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.727 seconds
+Domain Reload Profiling:
+	ReloadAssembly (728ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (512ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (215ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (184ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (41ms)
+				ProcessInitializeOnLoadAttributes (121ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.1 KB). Loaded Objects now: 4145.
+Memory consumption went from 157.9 MB to 157.9 MB.
+Total: 2.393833 ms (FindLiveObjects: 0.141708 ms CreateObjectMapping: 0.044417 ms MarkObjects: 2.171167 ms  DeleteObjects: 0.033458 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004358 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.654 seconds
+Domain Reload Profiling:
+	ReloadAssembly (654ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (498ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (192ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (202ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (41ms)
+				ProcessInitializeOnLoadAttributes (135ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.1 KB). Loaded Objects now: 4148.
+Memory consumption went from 157.9 MB to 157.9 MB.
+Total: 2.824292 ms (FindLiveObjects: 0.198500 ms CreateObjectMapping: 0.050541 ms MarkObjects: 2.548625 ms  DeleteObjects: 0.025792 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004685 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.694 seconds
+Domain Reload Profiling:
+	ReloadAssembly (694ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (494ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (190ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (187ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (41ms)
+				ProcessInitializeOnLoadAttributes (124ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.1 KB). Loaded Objects now: 4151.
+Memory consumption went from 157.9 MB to 157.9 MB.
+Total: 2.355542 ms (FindLiveObjects: 0.144458 ms CreateObjectMapping: 0.043417 ms MarkObjects: 2.127333 ms  DeleteObjects: 0.039541 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005103 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.716 seconds
+Domain Reload Profiling:
+	ReloadAssembly (716ms)
+		BeginReloadAssembly (102ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (552ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (218ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (209ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.0 KB). Loaded Objects now: 4154.
+Memory consumption went from 157.8 MB to 157.8 MB.
+Total: 2.715292 ms (FindLiveObjects: 0.236541 ms CreateObjectMapping: 0.050042 ms MarkObjects: 2.399708 ms  DeleteObjects: 0.028375 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004608 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.703 seconds
+Domain Reload Profiling:
+	ReloadAssembly (704ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (539ms)
+			LoadAssemblies (68ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (211ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (208ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (43ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.0 KB). Loaded Objects now: 4157.
+Memory consumption went from 157.8 MB to 157.8 MB.
+Total: 2.629375 ms (FindLiveObjects: 0.197167 ms CreateObjectMapping: 0.059209 ms MarkObjects: 2.343625 ms  DeleteObjects: 0.028667 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004481 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16b653000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/yonekuratakashigen/Documents/github/brick-breaker/FPS/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.783 seconds
+Domain Reload Profiling:
+	ReloadAssembly (783ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (568ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (223ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (213ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (44ms)
+				ProcessInitializeOnLoadAttributes (143ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3357 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 18 unused Assets / (22.0 KB). Loaded Objects now: 4160.
+Memory consumption went from 157.8 MB to 157.8 MB.
+Total: 2.996666 ms (FindLiveObjects: 0.148500 ms CreateObjectMapping: 0.044917 ms MarkObjects: 2.764666 ms  DeleteObjects: 0.037958 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2856.930806 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets
+  artifactKey: Guid(fb0c17ac540025347b7723636fa6729b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets using Guid(fb0c17ac540025347b7723636fa6729b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e1267fbdd2ce55e03d9be2e93f1d61') in 0.041408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.022131 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_A.prefab
+  artifactKey: Guid(d5af5550f54c9e443b700a9241c5236f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_A.prefab using Guid(d5af5550f54c9e443b700a9241c5236f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db349e0cb935dd6c16d6b5f6b48561d') in 0.103511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_C.prefab
+  artifactKey: Guid(ddf977d2f9d1af24aba7bb8023326159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_C.prefab using Guid(ddf977d2f9d1af24aba7bb8023326159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab2e619f5e1dff83a3f0b65da990ef9') in 0.025311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_D.prefab
+  artifactKey: Guid(a147bf73380e5a14cb78138204ccc3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Bullets/Bullet_ShotGun_D.prefab using Guid(a147bf73380e5a14cb78138204ccc3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3125c93bffc070ced2c45c9ea66338') in 0.016279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.719389 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments
+  artifactKey: Guid(17ce2c9f350bfc248b7f31a37ea3fb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments using Guid(17ce2c9f350bfc248b7f31a37ea3fb05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7f79636dd7052446ab40595cf6850c') in 0.002883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.894157 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels
+  artifactKey: Guid(2cd7f874970638e4a8e15bc75375cf50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels using Guid(2cd7f874970638e4a8e15bc75375cf50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca929b41dd87168ab715233d76fcf787') in 0.002280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.363162 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun
+  artifactKey: Guid(b0c4de0aeed18a144b230e2496775602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun using Guid(b0c4de0aeed18a144b230e2496775602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69934d78210b105c4b64c5bb0e9592aa') in 0.002304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.050677 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Flash Hider_A.prefab
+  artifactKey: Guid(0555697577c1ee94b950bac02cb209a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Flash Hider_A.prefab using Guid(0555697577c1ee94b950bac02cb209a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c0843f237864c9781af4fd392d55a43') in 0.041901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Shoke_B.prefab
+  artifactKey: Guid(76f21f08e93ce7f419e980118c6fe7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Shoke_B.prefab using Guid(76f21f08e93ce7f419e980118c6fe7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82748341fb2c4342e51c34e32924c81b') in 0.011111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Suppresor_A.prefab
+  artifactKey: Guid(b9779d89f4ea85a45a620bcc43a837ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Barrels/Muzzles_ShotGun/Muzzle_ShotGun_Suppresor_A.prefab using Guid(b9779d89f4ea85a45a620bcc43a837ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9cbebb9b7dd2aadff9984c2238e3235') in 0.021426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.316145 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories
+  artifactKey: Guid(fc4abc5c6b41b2f41a7c465eab788153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories using Guid(fc4abc5c6b41b2f41a7c465eab788153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1980fa49cb91fdaf3f6b4f226850ee88') in 0.006359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.522207 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails
+  artifactKey: Guid(8f7447b4adefdb649a3b866882b24a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails using Guid(8f7447b4adefdb649a3b866882b24a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '326e03a4c2c660979894aa8c5defd239') in 0.003847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.059801 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails/Rail_A_Down.prefab
+  artifactKey: Guid(6d1d0c63a14f60547a50c7d9f343457a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails/Rail_A_Down.prefab using Guid(6d1d0c63a14f60547a50c7d9f343457a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd882c1538711c6faa3e1716bc682e0f2') in 0.012125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails/Rail_A_Up.prefab
+  artifactKey: Guid(31bf83cd97218994dbc1e8025d5294dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/Accessories/Rails/Rail_A_Up.prefab using Guid(31bf83cd97218994dbc1e8025d5294dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de1a4c51472b7425cbe02a19fb8cb27') in 0.018301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.939931 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels
+  artifactKey: Guid(7c670d74d327b324dab774148877aa04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels using Guid(7c670d74d327b324dab774148877aa04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daae5610bb7d45cade90690d4f6909e2') in 0.002915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.891547 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips
+  artifactKey: Guid(0b5f63bddca73584bb23fe7d65b03b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips using Guid(0b5f63bddca73584bb23fe7d65b03b90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e44395a8140f1d4b5124decc92fd844') in 0.002933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.061391 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_A.prefab
+  artifactKey: Guid(b9cdc4e8869a9be41ab68434873be458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_A.prefab using Guid(b9cdc4e8869a9be41ab68434873be458) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c55ca2126c2ea7e27d10a529297ca91') in 0.014555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_E.prefab
+  artifactKey: Guid(5ba7f10e5bd750549b9fe6106b83bfa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_E.prefab using Guid(5ba7f10e5bd750549b9fe6106b83bfa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd01b46f1cf25947739f812f076ee8bb') in 0.022843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_I.prefab
+  artifactKey: Guid(fb0ea05de2e2ed140a409eb943b2e15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_I.prefab using Guid(fb0ea05de2e2ed140a409eb943b2e15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71b761c1b9538e3cbe35e5caf5ec0f73') in 0.009902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_T.prefab
+  artifactKey: Guid(42d4f33213f6ed94d8573ba24b8a58cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_T.prefab using Guid(42d4f33213f6ed94d8573ba24b8a58cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70603a4e17f6542e855fc12e7ca82d9') in 0.012460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_D.prefab
+  artifactKey: Guid(c7be8f16bc0ab954a80751c0e9c3b85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_D.prefab using Guid(c7be8f16bc0ab954a80751c0e9c3b85b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c65d64956456da31960d19c681be41') in 0.010595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_R.prefab
+  artifactKey: Guid(ae321381792c9b144b29bd8bcdc6f893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Low Poly ShotGun Weapon Pack 2/Prefabs/Attachments/UnderBarrels/ForwardGrips/ForwardGrip_R.prefab using Guid(ae321381792c9b144b29bd8bcdc6f893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b28e6b8e1fe15893bd0a8608a4717a0') in 0.011937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.078282 seconds.
+  path: Assets/Helica/PM-40/Materials/Environment
+  artifactKey: Guid(cb1dc86e68b072b41921bf86998e9a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/Environment using Guid(cb1dc86e68b072b41921bf86998e9a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878fe8257cd639b5272034e84cf46902') in 0.002814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.040232 seconds.
+  path: Assets/Helica/PM-40/Materials/Environment/Interior.exr
+  artifactKey: Guid(d69d8f35451f7884bbc78356ef23668c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/Environment/Interior.exr using Guid(d69d8f35451f7884bbc78356ef23668c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b7c05be28e916ce9d76386e0dac4d6') in 0.113209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.448688 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant4
+  artifactKey: Guid(87a1e9a07c2f26040a9188d04e6be1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant4 using Guid(87a1e9a07c2f26040a9188d04e6be1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba8a11f049899b0300f0330369f5be75') in 0.002349 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.060869 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant4/PM-40_Variant4.mat
+  artifactKey: Guid(96d45939720bc744b856ca2502f4cc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant4/PM-40_Variant4.mat using Guid(96d45939720bc744b856ca2502f4cc40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbc70fe49a01639c0bdcc66f8d680b14') in 0.525299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.738677 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant3
+  artifactKey: Guid(da2f80914c401164cbe1d2e0aadb58d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant3 using Guid(da2f80914c401164cbe1d2e0aadb58d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffff4f9472cf494d6fc3ae4bacf3421b') in 0.002990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.037179 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant3/PM-40_Variant3.mat
+  artifactKey: Guid(09f8951d21118424fac02833f44d0ec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant3/PM-40_Variant3.mat using Guid(09f8951d21118424fac02833f44d0ec0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa20323e2f185339e801baa43fdcf22') in 0.437788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.819110 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant2
+  artifactKey: Guid(0d5268428c79ce44794139f522da9ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant2 using Guid(0d5268428c79ce44794139f522da9ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a31f13e5d8f1342f9305e9db957a7a') in 0.002294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.056848 seconds.
+  path: Assets/Helica/PM-40/Materials/PM-40_Variant2/PM-40_Variant2.mat
+  artifactKey: Guid(953e7b7d3d9b0e345ab53f3eb82b044f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/PM-40_Variant2/PM-40_Variant2.mat using Guid(953e7b7d3d9b0e345ab53f3eb82b044f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c8474015012090b131374b2fc9a0cf') in 0.331381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.246434 seconds.
+  path: Assets/Helica/PM-40/Materials/Desk
+  artifactKey: Guid(fda55c19a1066734ea65cf6a3e7592e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/Desk using Guid(fda55c19a1066734ea65cf6a3e7592e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5477f1c4fe0343fd226a5c8e47027495') in 0.002671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.054328 seconds.
+  path: Assets/Helica/PM-40/Materials/Desk/Desk.mat
+  artifactKey: Guid(7bdea6aac5bf5334a823f41da5f81c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Helica/PM-40/Materials/Desk/Desk.mat using Guid(7bdea6aac5bf5334a823f41da5f81c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73461c15488eb81113d8450d955701e') in 0.088133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 375.949669 seconds.
+  path: Assets/PaintDecal.prefab
+  artifactKey: Guid(78fd7346030634b88900bddfe4ec28f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PaintDecal.prefab using Guid(78fd7346030634b88900bddfe4ec28f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c75e05d64a0e8eb0e19c23410fbfff') in 0.017350 seconds 
