@@ -9,7 +9,7 @@ public class ShotCon : MonoBehaviour
   [SerializeField, Min(1)]
   int damage = 1;
   [SerializeField, Min(1)]
-  int maxAmmo = 30;
+  int maxAmmo = 5;
   [SerializeField, Min(1)]
   float maxRange = 30;
   [SerializeField]
@@ -19,9 +19,9 @@ public class ShotCon : MonoBehaviour
   bool fireTimerIsActive = false;
   RaycastHit hit;
   WaitForSeconds fireIntervalWait;
-
   public GameObject paintDecalPrefab;
   public float decalSize = 0.3f;
+
   void Start()
   {
     fireIntervalWait = new WaitForSeconds(fireInterval);
@@ -36,8 +36,9 @@ public class ShotCon : MonoBehaviour
   // 弾の発射処理
   void Fire()
   {
-    if (fireTimerIsActive)
+    if (fireTimerIsActive && 0 < maxAmmo)
     {
+      maxAmmo = maxAmmo - 1;
       return;
     }
     if(Physics.Raycast(bulletSpawn.position, bulletSpawn.forward, out hit, maxRange, hitLayers, QueryTriggerInteraction.Ignore))
@@ -45,12 +46,12 @@ public class ShotCon : MonoBehaviour
       BulletHit();
     }
     StartCoroutine(nameof(FireTimer));
-    CreatePaintDecal(DecHit);
+    //CreatePaintDecal(hit);
   }
   // 弾がヒットしたときの処理
   void BulletHit()
   {
-    GameObject paintDecal = Instanttiate(paintDecalPrefab, DecHit.pointo, (Quaternion,LookRotation(DecHit.normal)));
+    GameObject paintDecal = Instantiate(paintDecalPrefab, hit.point, (Quaternion.LookRotation(hit.normal)));
     Debug.Log("弾が「" + hit.collider.gameObject.name + "」にヒットしました。");
   }
   // 弾を発射する間隔を制御するタイマー
