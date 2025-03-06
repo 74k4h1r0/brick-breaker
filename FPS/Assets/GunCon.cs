@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class GunCon : MonoBehaviour
 {
-    public GameObject[] gunS;
+    public GameObject[] gunN;
     private int number;
     void Start()
     {
-        for(int i = 0; i < gunS.Length; i++)
+        for(int i = 0; i < gunN.Length; i++)
         {
             if(i == number)
             {
-                gunS[i].SetActive(true);
+                gunN[i].SetActive(true);
             }
 
             else
             {
-                gunS[i].SetActive(false);
+                gunN[i].SetActive(false);
             }
         }
         
@@ -27,18 +27,18 @@ public class GunCon : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            number = (number + 1) % gunS.Length;
+            number = (number + 1) % gunN.Length;
 
-            for(int i = 0; i < gunS.Length; i++)
+            for(int i = 0; i < gunN.Length; i++)
             {
                 if(i == number)
                 {
-                    gunS[i].SetActive(true);
+                    gunN[i].SetActive(true);
                 }
 
                 else
                 {
-                    gunS[i].SetActive(false);
+                    gunN[i].SetActive(false);
                 }
             }
         }
